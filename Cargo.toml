@@ -16,7 +16,7 @@ exclude = [".git", ".gitignore", "README.md"]
 include = ["**/*.rs", "Cargo.toml"]
 
 [lib]
-name = "hello-world-rs"
+name = "hello_world_rs"
 path = "src/main.rs"
 
 [dependencies]
