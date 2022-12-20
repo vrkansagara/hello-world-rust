@@ -5,7 +5,7 @@
 [package]
 name = "hello-world-rs"
 # version should be notation of semver.org
-version = "0.1.4"
+version = "1.0.0"
 authors = [ "Vallabh Kansagara <vrkansagara@gmail.com>" ]
 edition = "2021"
 license-file = "LICENSE"
