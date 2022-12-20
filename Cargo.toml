@@ -2,7 +2,8 @@
 
 [package]
 name = "hello-world-rs"
-version = "0.1.0"
+version = "0.1.1"
+authors = [ "Vallabh Kansagara <vrkansagara@gmail.com>" ]
 edition = "2021"
 license-file = "LICENSE"
 description = "Hello world in Rust language"
