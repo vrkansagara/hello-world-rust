@@ -28,6 +28,10 @@ cargo fix --allow-dirty
 # nm target/release/hello-world-rs | tail
 # Yes, Yes, I know gdb for something....
 # gdb -q target/release/hello-world-rs
+# size target/release/hello-world-rs
+
+# Let's measure timing
+#time target/release/hello-world-rs > /dev/null 2>&1
 
 status=$?
 [ $status -eq 0 ] && echo "[${SCRIPTDIRPATH}/${SCRIPTNAME}] successfully executed ....[DONE]" || exit $status
