@@ -7,5 +7,16 @@ authors = [ "Vallabh Kansagara <vrkansagara@gmail.com>" ]
 edition = "2021"
 license-file = "LICENSE"
 description = "Hello world in Rust language"
+documentation = "https://github.com/vrkansagara/hello-world-rust/wiki"
+homepage = "https://github.com/vrkansagara/hello-world-rust/wiki"
+repository = "https://github.com/vrkansagara/hello-world-rust"
+keywords = ["hello-world","sample"]
+readme = "README.md"
+exclude = [".git", ".gitignore", "README.md"]
+include = ["**/*.rs", "Cargo.toml"]
+
+[lib]
+name = "vrkansagara_helloworld"
+path = "src/main.rs"
 
 [dependencies]
