@@ -16,5 +16,22 @@ fi
 echo "I am located at  "
 cargo fix --allow-dirty
 
+
+# readelf -h target/release/hello-world-rs
+# file target/release/hello-world-rs
+# ldd target/release/hello-world-rs
+# hexdump -C  target/release/hello-world-rs | head
+# strings target/release/hello-world-rs
+# readelf -h target/release/hello-world-rs
+# objdump -d  target/release/hello-world-rs | head
+# strace -f   target/release/hello-world-rs
+# nm target/release/hello-world-rs | tail
+# Yes, Yes, I know gdb for something....
+# gdb -q target/release/hello-world-rs
+# size target/release/hello-world-rs
+
+# Let's measure timing
+#time target/release/hello-world-rs > /dev/null 2>&1
+
 status=$?
 [ $status -eq 0 ] && echo "[${SCRIPTDIRPATH}/${SCRIPTNAME}] successfully executed ....[DONE]" || exit $status
