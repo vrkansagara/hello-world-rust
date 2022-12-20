@@ -1,5 +1,6 @@
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 # Build parameters https://doc.rust-lang.org/rustc/codegen-options/index.html
+# Exploring PGO for the Rust compiler https://blog.rust-lang.org/inside-rust/2020/11/11/exploring-pgo-for-the-rust-compiler.html
 
 [package]
 name = "hello-world-rs"
@@ -24,11 +25,13 @@ path = "src/main.rs"
 [profile.dev]
 opt-level = 0
 lto = "thin"
+panic = "abort"
 
 [profile.release]
 opt-level = 3
 lto = true
 overflow-checks = true
+panic = "abort"
 
 
 [dependencies]

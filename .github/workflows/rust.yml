@@ -20,5 +20,7 @@ jobs:
       run: cargo build --verbose
     - name: Build release
       run: cargo build --release
+    - name: Build release
+      run: RUSTFLAGS="-C target-cpu=native" cargo build --release
     - name: Run tests
       run: cargo test --verbose
