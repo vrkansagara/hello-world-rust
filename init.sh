@@ -15,21 +15,10 @@ fi
 
 if [[ "$1" == "-f" ]]; then
     cargo fmt
-    cargo fix --allow-dirty
     exit 0
 fi
 
-if [[ "$1" == "-fmt" ]]; then
-    cargo fmt
-    cargo fix --allow-dirty
-    exit 0
-fi
 
-if [[ "$1" == "-ff" ]]; then
-    cargo fmt
-    cargo fix --allow-dirty
-    exit 0
-fi
 
 if [[ "$1" == "--install=nightly" ]]; then
     rustup update

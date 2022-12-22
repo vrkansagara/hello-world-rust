@@ -20,8 +20,8 @@ include = ["**/*.rs", "Cargo.toml"]
 publish = true
 
 [lib]
-name = "hello_world_rs"
-path = "src/lib.rs"
+name = "hello_world"
+path = "src/lib/main.rs"
 
 [profile.dev]
 # 0: no optimizations
