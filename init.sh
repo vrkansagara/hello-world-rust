@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # set -e # This setting is telling the script to exit on a command error.
 if [[ "$1" == "-v" ]]; then
-  set -x # You refer to a noisy script.(Used to debugging)
+    set -x # You refer to a noisy script.(Used to debugging)
 fi
 
 export DEBIAN_FRONTEND=noninteractive
@@ -10,12 +10,37 @@ SCRIPTNAME=$0
 SCRIPTDIRPATH=$(realpath $(dirname $0))
 
 if [ "$(whoami)" != "root" ]; then
-  SUDO=sudo
+    SUDO=sudo
 fi
+
+echo "Lets update the rust"
+rustup self update
+rustup update
+
+# If you want to install stable then ...
+#rustup install stable
+#rustup default stable
 
 echo "I am located at  "
 cargo fix --allow-dirty
 
+echo " rustup show"
+rustup show
+
+echo " rustup version"
+rustup -V
+
+echo " rustc version"
+rustc -V
+
+echo " cargo version"
+cargo -V
+
+if [[ "$1" == "--install=nightly" ]]; then
+    rustup update
+    rustup update nightly
+#    cargo +nightly fmt --check
+fi
 
 # readelf -h target/release/hello-world-rs
 # file target/release/hello-world-rs

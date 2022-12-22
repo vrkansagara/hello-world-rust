@@ -17,10 +17,19 @@ const AUTHOR_NAME: &str = "Vallabh Kansagara";
 const AUTHOR_EMAIL: &str = "vrkansagara@gmail.com";
 const AUTHOR_GITHUB_PROFILE: &str = "https://github.com/vrkansagara";
 
-
 const MONTHS: [&str; 12] = [
-    "January", "February", "March", "April", "May", "June", "July",
-    "August", "September", "October", "November", "December"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
 ];
 
 fn main() {
@@ -28,5 +37,5 @@ fn main() {
     println!("Your github homepage is {0}", AUTHOR_GITHUB_PROFILE);
     println!("{0} <{1}>", AUTHOR_NAME, AUTHOR_EMAIL);
 
-    println!("Current month is {0}",MONTHS[1])
+    println!("Current month is {0}", MONTHS[1])
 }
