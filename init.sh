@@ -13,6 +13,31 @@ if [ "$(whoami)" != "root" ]; then
     SUDO=sudo
 fi
 
+if [[ "$1" == "-f" ]]; then
+    cargo fmt
+    cargo fix --allow-dirty
+    exit 0
+fi
+
+if [[ "$1" == "-fmt" ]]; then
+    cargo fmt
+    cargo fix --allow-dirty
+    exit 0
+fi
+
+if [[ "$1" == "-ff" ]]; then
+    cargo fmt
+    cargo fix --allow-dirty
+    exit 0
+fi
+
+if [[ "$1" == "--install=nightly" ]]; then
+    rustup update
+    rustup update nightly
+    #    cargo +nightly fmt --check
+    exit 0
+fi
+
 echo "Lets update the rust"
 rustup self update
 rustup update
@@ -20,6 +45,7 @@ rustup update
 # If you want to install stable then ...
 #rustup install stable
 #rustup default stable
+
 
 echo "I am located at  "
 cargo fix --allow-dirty
@@ -35,12 +61,6 @@ rustc -V
 
 echo " cargo version"
 cargo -V
-
-if [[ "$1" == "--install=nightly" ]]; then
-    rustup update
-    rustup update nightly
-#    cargo +nightly fmt --check
-fi
 
 # readelf -h target/release/hello-world-rs
 # file target/release/hello-world-rs
