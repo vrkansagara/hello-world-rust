@@ -14,10 +14,8 @@
 
 use hello_world::author;
 
-
 const AUTHOR_NAME: &str = "Vallabh Kansagara";
 const AUTHOR_EMAIL: &str = "vrkansagara@gmail.com";
-
 
 const MONTHS: [&str; 12] = [
     "January",
